@@ -61,9 +61,9 @@ Mat applyGaussianBlur(const Mat& inputImage, const int& p_kernelSize, const doub
     }
 
     // Normalize kernel
-    for (int i = 0; i < 5; ++i) 
+    for (int i = 0; i < p_kernelSize; ++i) 
     {
-        for (int j = 0; j < 5; ++j) 
+        for (int j = 0; j < p_kernelSize; ++j) 
 	{
             kernel.at<float>(i,j) /= sum;
         }
